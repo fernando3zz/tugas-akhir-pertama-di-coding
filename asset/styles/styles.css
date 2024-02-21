@@ -1,0 +1,295 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+h2,
+h3 {
+  color: #ffc108;
+}
+
+nav a {
+  font-size: 18px;
+
+  font-weight: 400;
+  text-decoration: none;
+
+  color: white;
+}
+
+nav a:hover {
+  font-weight: bold;
+}
+
+.profile header {
+  text-align: center;
+}
+
+.featured-image {
+  width: 100%;
+  max-height: 300px;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.profile img {
+  max-width: 200px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+
+  padding: 20px;
+}
+
+.jumbotron {
+  font-size: 20px;
+  padding: 60px;
+  background-color: #0d9276;
+  text-align: center;
+  color: white;
+}
+
+nav ul {
+  padding-inline: 38rem;
+  display: flex;
+
+  gap: 2rem;
+}
+
+nav li {
+  list-style-type: none;
+  margin-right: 20px;
+}
+
+nav {
+  background-color: #74e291;
+  padding: 5px;
+
+  position: sticky;
+  top: 0;
+}
+
+main {
+  padding: 20px;
+
+  display: flex;
+  gap: 1.5rem;
+}
+
+#content {
+  flex: 5;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem 2rem;
+}
+
+aside {
+  flex: 1;
+
+  padding-right: 20px;
+}
+
+header {
+  display: inline;
+}
+
+#contact {
+  padding: 20px;
+  
+}
+
+#contact h1 {
+  position: relative;
+}
+
+#contact.h1::before {
+  content: "";
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: -20px;
+  top: -10px;
+  z-index: -1;
+}
+
+.contact-detail {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 72px;
+  column-gap: 128px;
+}
+
+.contact-detail > div,
+.contact-detail > form {
+  width: 50%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid #ffc108;
+  padding: 64px 32px;
+}
+
+form h1 {
+  font-size: 32px;
+  text-align: center;
+}
+
+form button {
+  border: none;
+}
+
+form button:hover {
+  cursor: pointer;
+}
+
+.form-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 32px;
+  margin-top: 32px;
+  grid-template-areas:
+    "name subject"
+    "email phone"
+    "message message";
+}
+
+#input-name {
+  grid-area: name;
+}
+
+#input-subject {
+  grid-area: subject;
+}
+
+#input-email {
+  grid-area: email;
+}
+
+#input-phone {
+  grid-area: phone;
+}
+
+#input-message {
+  grid-area: message;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+}
+
+.input-group label {
+  font-weight: 700;
+  margin-bottom: 16px;
+  font-size: 24px;
+}
+
+.input-groupvinput {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+  font-size: 20px;
+}
+
+.input-group input:focus {
+  border-bottom: 2px solid #ffc108;
+}
+
+.btn {
+  background-color: #ffc108;
+  color: white;
+  padding: 8px 24px;
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  background: #74e291;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+/* Perangkat dengan lebar layar 1200px dan di bawahnya */
+@media screen and (max-width: 1200px) {
+  main {
+    flex-flow: column nowrap;
+  }
+  main aside {
+    align-self: center;
+  }
+}
+/* Perangkat dengan lebar layar 768px dan di bawahnya */
+@media screen and (max-width: 768px) {
+  nav ul {
+    justify-content: center;
+  }
+  main aside {
+    align-self: stretch;
+  }
+}
